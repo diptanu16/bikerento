@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Owner</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h2>Add Owner</h2>
+        <hr/>
+        <form th:action="@{/saveOwner}" th:object="${owner1}" method="POST">
+
+        <input type="text" th:field="*{name}" placeholder="Enter Owner Name" class="form-control col-4 mb-4" /><br>
+
+        <input type="text" th:field="*{bikename}" placeholder="Enter Bike Name" class="form-control col-4 mb-4" /><br>
+
+        <input type="text" th:field="*{location}" placeholder="Enter Bike Location" class="form-control col-4 mb-4" /><br>
+
+        <input type="text" th:field="*{phoneno}" placeholder="Enter PhoneNo" class="form-control col-4 mb-4" /><br>
+
+        <input type="text" th:field="*{pincode}" placeholder="Enter Pincode" class="form-control col-4 mb-4" /><br>
+
+        <button class="btn btn-primary" type="submit">Save</button>
+        <input type="hidden" th:field="*{id}"/>
+        </form>
+        <hr/>
+        <a href="/list">Back to List</a>
+    </div>
+
+</body>
