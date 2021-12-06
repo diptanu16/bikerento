@@ -32,7 +32,7 @@ public class OwnerController {
     public ModelAndView addOwnerForm(){
         ModelAndView mav = new ModelAndView("add-owner-form");
         Owner newOwner = new Owner();
-        mav.addObject("owner1",newOwner);
+        mav.addObject("owner",newOwner);
         return  mav;
     }
     @PostMapping("/saveOwner")

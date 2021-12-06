@@ -11,7 +11,7 @@
     <div class="container">
         <h2>Add Owner</h2>
         <hr/>
-        <form th:action="@{/saveOwner}" th:object="${owner1}" method="POST">
+        <form th:action="@{/saveOwner}" th:object="${owner}" method="POST">
 
         <input type="text" th:field="*{name}" placeholder="Enter Owner Name" class="form-control col-4 mb-4" /><br>
 
